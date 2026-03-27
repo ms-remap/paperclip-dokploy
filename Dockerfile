@@ -56,4 +56,4 @@ VOLUME ["/paperclip"]
 EXPOSE 3100
 
 USER node
-CMD ["node", "--import", "./server/node_modules/tsx/dist/loader.mjs", "server/dist/index.js"]
+CMD sh -c "pnpm paperclipai allowed-hostname nicole.paperclip.useprivate.ai && node --import ./server/node_modules/tsx/dist/loader.mjs server/dist/index.js"
